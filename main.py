@@ -9,7 +9,7 @@ class App(ctk.CTk):
      def __init__(self):
            super ().__init__() 
            self.configuracao_da_janela_inicial()
-           self.tela_de_login()
+           self.tela_de_login
 
    #Configurando a janela principal 
      def configuracao_da_janela_inicial(self):
