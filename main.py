@@ -1,5 +1,8 @@
 import customtkinter as ctk
-from tkinter import*
+from PIL import Image
+import os
+print("Pasta atual do script:", os.path.dirname(__file__))
+print("Arquivos encontrados:", os.listdir(os.path.dirname(__file__)))
 
 
 class App(ctk.CTk):
@@ -18,3 +21,15 @@ class App(ctk.CTk):
 
      def tela_de_login(self):
         #Trabalhando com imagens 
+
+        self.img = ctk.CTkImage(light_image=Image.open("image.png"), 
+                                dark_image=Image.open("image.png"), 
+                                size=(200, 200))
+                           
+        self.lb_img = ctk.CTkLabel(self, text=None, image=self.img)
+        self.lb_img.grid(row=1, column=0, padx=10, pady=20)
+      
+
+if __name__=="__main__":
+     App = App()
+     App.mainloop()
