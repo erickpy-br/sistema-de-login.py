@@ -9,7 +9,7 @@ class App(ctk.CTk):
      def __init__(self):
            super ().__init__() 
            self.configuracao_da_janela_inicial()
-           self.tela_de_login
+           self.tela_de_login()
 
    #Configurando a janela principal 
      def configuracao_da_janela_inicial(self):
@@ -22,9 +22,9 @@ class App(ctk.CTk):
      def tela_de_login(self):
         #Trabalhando com imagens 
 
-        self.img = ctk.CTkImage(light_image=Image.open("image.png"), 
-                                dark_image=Image.open("image.png"), 
-                                size=(200, 200))
+        self.img = ctk.CTkImage(light_image=Image.open("C:/Users/erick/Downloads/login-img.png"), 
+                                dark_image=Image.open("C:/Users/erick/Downloads/login-img.png"), 
+                                size=(500, 300))
                            
         self.lb_img = ctk.CTkLabel(self, text=None, image=self.img)
         self.lb_img.grid(row=1, column=0, padx=10, pady=20)
