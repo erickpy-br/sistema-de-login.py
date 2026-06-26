@@ -22,13 +22,16 @@ class App(ctk.CTk):
      def tela_de_login(self):
         #Trabalhando com imagens 
 
-        self.img = ctk.CTkImage(light_image=Image.open("C:/Users/erick/Downloads/login-img.png"), 
-                                dark_image=Image.open("C:/Users/erick/Downloads/login-img.png"), 
-                                size=(500, 300))
+        self.img = ctk.CTkImage(light_image=Image.open("login-img.png"), 
+                                dark_image=Image.open("login-img.png"), 
+                                size=(250, 250))
                            
         self.lb_img = ctk.CTkLabel(self, text=None, image=self.img)
         self.lb_img.grid(row=1, column=0, padx=10, pady=20)
-      
+
+        self.title = ctk.CTkLabel(self, text="Faça seu loguin ou cadastre-se na plataforma", font=("Century Gotic bold", 14))
+        self.title.grid(row=0, column=0, pady=0)
+
 
 if __name__=="__main__":
      App = App()
